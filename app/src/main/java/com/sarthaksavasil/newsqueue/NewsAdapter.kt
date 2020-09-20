@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.w3c.dom.Text
 
 class NewsAdapter (val context : Context,val articles : List<Articles> ): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
@@ -26,6 +27,7 @@ class NewsAdapter (val context : Context,val articles : List<Articles> ): Recycl
         holder.newsDescription.text = article.description
         holder.newsTitle.text = article.title
 
+        Glide.with(context).load(article.urlToImage).into(holder.newsImage)
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
