@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.w3c.dom.Text
@@ -28,6 +29,10 @@ class NewsAdapter (val context : Context,val articles : List<Articles> ): Recycl
         holder.newsTitle.text = article.title
 
         Glide.with(context).load(article.urlToImage).into(holder.newsImage)
+
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context,article.title,Toast.LENGTH_LONG).show()
+        }
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
