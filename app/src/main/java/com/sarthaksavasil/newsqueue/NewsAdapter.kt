@@ -32,7 +32,7 @@ class NewsAdapter (val context : Context,val articles : List<Articles> ): Recycl
         Glide.with(context).load(article.urlToImage).into(holder.newsImage)
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(context,article.title,Toast.LENGTH_LONG).show()
+            //Toast.makeText(context,article.title,Toast.LENGTH_LONG).show()
 
             val intent = Intent( context , NewsDetailActivity :: class.java)
             intent.putExtra("URL",article.url)
