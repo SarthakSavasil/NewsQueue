@@ -8,7 +8,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:id="@+id/newsImage"/>
     <TextView
         android:id="@+id/newsTitle"
         style="@style/TextAppearance.AppCompat.Headline"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Description"
         android:maxLines="2"
+        android:id="@+id/newsDescription"
         style="@style/TextAppearance.AppCompat.Body1"/>
 
 </LinearLayout>
