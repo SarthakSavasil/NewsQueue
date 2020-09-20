@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_margin="30dp"
     android:elevation="10dp">
 
     <LinearLayout
@@ -11,10 +11,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="15dp"
-    android:background="#D3D3D3">
+    android:background="#FFE">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
         android:id="@+id/newsImage"/>
     <TextView
@@ -24,12 +24,13 @@
         android:layout_height="wrap_content"
         android:text="Title"
         android:maxLines="1"
+        android:layout_marginBottom="5dp"
         android:ems="10"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Description"
-        android:maxLines="2"
+        android:maxLines="3"
         android:id="@+id/newsDescription"
         style="@style/TextAppearance.AppCompat.Body1"/>
 

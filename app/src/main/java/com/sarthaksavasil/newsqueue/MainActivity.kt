@@ -36,8 +36,10 @@ class MainActivity : AppCompatActivity() {
 
         layoutManager.setItemChangedListener(object : StackLayoutManager.ItemChangedListener {
             override fun onItemChanged(position: Int) {
+
                 if(totalR > layoutManager.itemCount && layoutManager.getFirstVisibleItemPosition() >=layoutManager.itemCount-5)
                 {
+
                     pageNo++
                     getNews()
                 }

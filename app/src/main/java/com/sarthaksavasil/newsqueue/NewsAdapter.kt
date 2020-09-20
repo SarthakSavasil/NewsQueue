@@ -1,6 +1,7 @@
 package com.sarthaksavasil.newsqueue
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,11 @@ class NewsAdapter (val context : Context,val articles : List<Articles> ): Recycl
 
         holder.itemView.setOnClickListener {
             Toast.makeText(context,article.title,Toast.LENGTH_LONG).show()
+
+            val intent = Intent( context , NewsDetailActivity :: class.java)
+            intent.putExtra("URL",article.url)
+            context.startActivity(intent)
+
         }
     }
 
